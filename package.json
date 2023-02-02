@@ -1,0 +1,17 @@
+{
+  "name": "luftbildkarte_fuer_allmende-kontor",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "dependencies": {
+    "ol": "latest",
+    "ol-layerswitcher": "^4.1.0",
+    "proj4": "^2.8.1"
+  }
+}
