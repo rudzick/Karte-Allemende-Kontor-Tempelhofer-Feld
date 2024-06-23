@@ -465,7 +465,7 @@ var berlin2022 = new TileLayer({
 var berlin2023 = new TileLayer({
     'title' : 'Digitale farbige TrueOrthophotos 2023',
     type: 'base',
-    visible: true,
+    visible: false,
     extent: extentBerlin,
     source: new TileWMS({
       url: 'https://gdi.berlin.de/services/wms/truedop_2023',
@@ -477,6 +477,28 @@ var berlin2023 = new TileLayer({
 	    'SERVICE': 'WMS',
 	    'VERSION': '1.3.0',
             'LAYERS': 'truedop_2023',
+	    'CRS': 'EPSG:25833',
+            'FORMAT': 'image/png',
+      },
+      serverType: 'mapserver',
+    }),
+});
+
+var berlin2024 = new TileLayer({
+    'title' : 'Digitale farbige TrueOrthophotos 2024',
+    type: 'base',
+    visible: true,
+    extent: extentBerlin,
+    source: new TileWMS({
+      url: 'https://gdi.berlin.de/services/wms/truedop_2024',
+      crossOrigin: 'anonymous',
+      attributions:
+        '© <a href="https://gdi.berlin.de/geonetwork/srv/ger/catalog.search#/metadata/aff8a8a5-2b48-44e8-949b-ea5f7d382a4f">Geoportal Berlin / Digitale farbige TrueOrthophotos 2024"</a>' +
+	    ' &amp; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	params: {
+	    'SERVICE': 'WMS',
+	    'VERSION': '1.3.0',
+            'LAYERS': 'truedop_2024',
 	    'CRS': 'EPSG:25833',
             'FORMAT': 'image/png',
       },
@@ -507,7 +529,8 @@ var basisLayers = new LayerGroup({
 	     berlin2020,
 	     berlin2021,
 	     berlin2022,
-	     berlin2023]
+	     berlin2023,
+	     berlin2024]
 });
 
 var overlaysOSM = new LayerGroup({
