@@ -72,7 +72,7 @@ var berlin1928 = new TileLayer({
     visible: false,
     extent: extentBerlin,
     source: new TileWMS({
-      url: 'https://fbinter.stadt-berlin.de/fb/wms/senstadt/k_luftbild1928',
+      url: 'https://gdi.berlin.de/services/wms/luftbild_1928_04?SERVICE=WMS&',
       crossOrigin: 'anonymous',
       attributions:
         '© <a href="https://fbinter.stadt-berlin.de/fb/berlin/service_intern.jsp?id=k_luftbild1928@senstadt&type=WMS">Geoportal Berlin / Luftbildplan 1928</a>' +
@@ -80,7 +80,7 @@ var berlin1928 = new TileLayer({
 	params: {
 	    'SERVICE': 'WMS',
 	    'VERSION': '1.3.0',
-            'LAYERS': '0',
+            'LAYERS': 'luftbilder_1928_04_raster',
 	    'CRS': 'EPSG:25833',
             'FORMAT': 'image/png',
       },
