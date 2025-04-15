@@ -80,7 +80,7 @@ var berlin1928 = new TileLayer({
 	params: {
 	    'SERVICE': 'WMS',
 	    'VERSION': '1.3.0',
-            'LAYERS': 'luftbilder_1928_04_raster',
+            'LAYERS': 'c_luftbilder_1928_04_raster',
 	    'CRS': 'EPSG:25833',
             'FORMAT': 'image/png',
       },
